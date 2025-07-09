@@ -1,4 +1,4 @@
-## Sublima Pricing Section ##
+# Sublima Pricing Section 
 
 This repository contains the Pricing Section implementation from the Sublima Land v3.1 Figma design. The section is built using React, Vite, TypeScript, and Tailwind CSS, and includes dynamic features such as billing period toggling and plan selection highlighting.
 
