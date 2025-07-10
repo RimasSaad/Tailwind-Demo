@@ -36,9 +36,9 @@ const PricingSection = () => {
   ];
   
   return (
-    // Section with vertical padding and white background 
+    // Section with full width 
     <section className="w-full">
-        {/* Container to center content with max width and horizontal padding */}
+        {/* Container to center content with max width */}
         <div className="w-[1440px] h-[956px] bg-white mx-auto"> 
 
             {/* Containerfor 1 */}
@@ -48,11 +48,11 @@ const PricingSection = () => {
                     {/* Heading and Supporting text */}
                     <div className="w-full max-w-[768px] flex flex-col gap-[16px] mx-auto text-center">
                         <div className="w-full max-w-[768px] flex flex-col gap-[12px]">
-                            <h4 className="text-[16px] leading-[24px] font-semibold tracking-normal text-[#4F46E5]">Pricing</h4>
-                            <h2 className="text-[36px] leading-[44px] font-semibold tracking-[-2px] text-[#111827]">
+                            <h4 className="font-inter text-[16px] leading-[24px] font-semibold tracking-normal text-[#4F46E5]">Pricing</h4>
+                            <h2 className="font-inter text-[36px] leading-[44px] font-semibold tracking-[-2px] text-[#111827]">
                                 Scalable plans for any team size</h2> 
                         </div>
-                        <p className="text-[18px] text-[#4B5563] text-base leading-[28px] tracking-normal max-w-[768px] mx-auto">
+                        <p className=" font-inter text-[18px] text-[#4B5563] text-base leading-[28px] tracking-normal max-w-[768px] mx-auto">
                             Unlock the power of scalability with our plans tailored to accommodate teams of any size, 
                             providing the flexibility you need to grow and succeed.
                         </p>
