@@ -22,6 +22,13 @@ Both sections are built using React, Vite, TypeScript, and Tailwind CSS.
 - Fully responsive grid layout with accurate spacing and typography
 - Styled based on Sublima Land v3.1 design specifications
 
+## Call To Action (CTA) Section
+- Highlighted container with background and rounded corners
+- Heading and supporting text centered
+- Two clickable buttons:
+  - **Get started** (solid purple button)
+  - **Learn more** (text button with arrow icon)
+- 
 ## Technologies Used
 - React (with TypeScript)
 - Vite (fast dev build tool)
