@@ -2,7 +2,7 @@
 // This file defines a React component that renders a Frequently asked questions section.
 // The component uses Tailwind CSS for styling.
 
-import React, {useState} from 'react';
+import React from 'react';
 
 const FAQSection = () => {
 
@@ -18,6 +18,7 @@ const FAQSection = () => {
                         <div className="w-[768px] h-[44px] gap-[12px]">
                             <h4 className="font-inter font-semibold text-[36px] leading-[44px] tracking-[-2px] text-center text-[#111827]">Frequently asked questions</h4>
                         </div>
+                        {/* Supporting text */}
                         <p className="font-inter font-normal text-[18px] leading-[28px] text-center">
                             Here are some of the most frequent questions we get asked.
                         </p>
