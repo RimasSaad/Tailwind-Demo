@@ -1,6 +1,7 @@
+//CTASection.tsx
+// This file defines a React component that renders a Call to Action section.
 
 
-import React, {useState} from 'react';
 import ArrowIcon from '../assets/arrow-right.svg';
 
 

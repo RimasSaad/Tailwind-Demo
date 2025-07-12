@@ -1,7 +1,6 @@
 // App.tsx
 // Entry point for your React app. Renders the PricingSection component.
 
-import React from 'react';
 import PricingSection from './components/PricingSection'; // Import the PricingSection component
 import FAQSection from './components/FAQSection'; // Import the FAQSection component
 import CTASection from './components/CTASection'; // Import the CTASection component

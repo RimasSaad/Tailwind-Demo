@@ -2,7 +2,6 @@
 // This file defines a React component that renders a Frequently asked questions section.
 // The component uses Tailwind CSS for styling.
 
-import React from 'react';
 
 const FAQSection = () => {
 

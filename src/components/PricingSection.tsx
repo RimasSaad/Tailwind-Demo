@@ -3,7 +3,7 @@
 // Each card includes a plan name, price, features, and a button to get started. 
 // The component uses Tailwind CSS for styling.
 
-import React, {useState} from 'react';
+import {useState} from 'react';
 
 const PricingSection = () => {
 
