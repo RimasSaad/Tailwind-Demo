@@ -2,17 +2,50 @@
 // This file defines a React component that renders a Frequently asked questions section.
 // The component uses Tailwind CSS for styling.
 
+const faqItems = [
+  {
+    question: "How do I get started with your product?",
+    answer:
+      "Sign up on our website, explore features, customize your profile, and start using our product. We're here to help!",
+  },
+  {
+    question: "What payment methods do you accept?",
+    answer:
+      "We accept major credit cards (Visa, Mastercard, American Express), PayPal, and bank transfers for payment.",
+  },
+  {
+    question: "Is there a free trial available?",
+    answer:
+      "Yes! We offer a free trial period for new users. You can sign up and explore our product's features and functionalities before making a commitment.",
+  },
+  {
+    question: "Is technical support available?",
+    answer:
+      "Yes, technical support is available for our product. If you encounter any issues or have questions, simply reach out to our support team.",
+  },
+  {
+    question: "Can I cancel my subscription?",
+    answer:
+      "Yes, you can cancel your subscription. Simply access your account settings and follow the cancellation instructions.",
+  },
+  {
+    question: "Is my data secure with your product?",
+    answer:
+      "Yes, your data is secure with our product. We prioritize the protection and privacy of your information.",
+  },
+];
 
 const FAQSection = () => {
 
     return (
         //Secion with full width
         <section className="w-full">
-            <div className="w-[1440px] h-[652px] bg-white mx-auto flex flex-col items-center pt-[96px] pb-[96px] gap-[48px]">
+            <div className="w-full max-w-[1440px] mx-auto bg-white flex flex-col items-center pt-[64px] pb-[96px] gap-[48px] mx-auto">
                 {/* Container to hold Heading, supporting text and the FAQ */}
-                <div className="w-[1280px] h-[460px] pr-[32px] pl-[32px] gap-[64px] mx-auto">
+                <div className="w-full max-w-[1280px] px-4 gap-[64px] flex flex-col items-center">
+
                     {/* Heading and supporting text */}
-                    <div className="w-[768px] h-[116px] flow flow-col gap-[16px] mx-auto">
+                    <div className="w-full max-w-[768px] flow flow-col gap-[16px]">
                         {/* Heading */}
                         <div className="w-[768px] h-[44px] gap-[12px]">
                             <h4 className="font-inter font-semibold text-[36px] leading-[44px] tracking-[-2px] text-center text-[#111827]">Frequently asked questions</h4>
@@ -27,66 +60,18 @@ const FAQSection = () => {
                         </p>
                     </div>
                     {/* FAQ Container */}
-                    <div className="grid grid-cols-3 gap-x-[32px] gap-y-[32px] w-[1216px] mx-auto">
-                        {/* Question 1 */}
-                        <div className="flex flex-col w-[384px] gap-[8px]">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[32px] gap-y-[32px] w-full max-w-[1216px] place-items-center">
+                        {faqItems.map((item, index) => (
+                        <div key={index} 
+                            className="flex flex-col w-full max-w-[384px] gap-[8px] text-center">
                             <p className="font-inter font-semibold text-[18px] leading-[28px] text-[#111827]">
-                            How do I get started with your product?
+                            {item.question}
                             </p>
                             <p className="font-inter font-normal text-[16px] leading-[24px] text-[#4B5563]">
-                            Sign up on our website, explore features, customize your profile, and start using our product. We're here to help!
+                            {item.answer}
                             </p>
                         </div>
-
-                        {/* Question 2 */}
-                        <div className="flex flex-col w-[384px] gap-[8px]">
-                            <p className="font-inter font-semibold text-[18px] leading-[28px] text-[#111827]">
-                            What payment methods do you accept?
-                            </p>
-                            <p className="font-inter font-normal text-[16px] leading-[24px] text-[#4B5563]">
-                            We accept major credit cards (Visa, Mastercard, American Express), PayPal, and bank transfers for payment.
-                            </p>
-                        </div>
-
-                        {/* Question 3 */}
-                        <div className="flex flex-col w-[384px] gap-[8px]">
-                            <p className="font-inter font-semibold text-[18px] leading-[28px] text-[#111827]">
-                            Is there a free trial available?
-                            </p>
-                            <p className="font-inter font-normal text-[16px] leading-[24px] text-[#4B5563]">
-                            Yes! We offer a free trial period for new users. You can sign up and explore our product's features and functionalities before making a commitment.
-                            </p>
-                        </div>
-
-                        {/* Question 4 */}
-                        <div className="flex flex-col w-[384px] gap-[8px]">
-                            <p className="font-inter font-semibold text-[18px] leading-[28px] text-[#111827]">
-                            Is technical support available?
-                            </p>
-                            <p className="font-inter font-normal text-[16px] leading-[24px] text-[#4B5563]">
-                            Yes, technical support is available for our product. If you encounter any issues or have questions, simply reach out to our support team.
-                            </p>
-                        </div>
-
-                        {/* Question 5 */}
-                        <div className="flex flex-col w-[384px] gap-[8px]">
-                            <p className="font-inter font-semibold text-[18px] leading-[28px] text-[#111827]">
-                            Can I cancel my subscription?
-                            </p>
-                            <p className="font-inter font-normal text-[16px] leading-[24px] text-[#4B5563]">
-                            Yes, you can cancel your subscription. Simply access your account settings and follow the cancellation instructions.
-                            </p>
-                        </div>
-
-                        {/* Question 6 */}
-                        <div className="flex flex-col w-[384px] gap-[8px]">
-                            <p className="font-inter font-semibold text-[18px] leading-[28px] text-[#111827]">
-                            Is my data secure with your product?
-                            </p>
-                            <p className="font-inter font-normal text-[16px] leading-[24px] text-[#4B5563]">
-                            Yes, your data is secure with our product. We prioritize the protection and privacy of your information.
-                            </p>
-                        </div>
+                        ))}
                     </div>
 
                 </div>

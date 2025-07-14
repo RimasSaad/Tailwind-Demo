@@ -39,7 +39,7 @@ const PricingSection = () => {
     // Section with full width 
     <section className="w-full">
         {/* Container to center content with max width */}
-        <div className="w-[1440px] h-[956px] bg-white mx-auto"> 
+        <div className="w-[1440px]  bg-white mx-auto"> 
 
             {/* Containerfor 1 */}
             <div className="w-[1440px] pt-[96px] flex flex-col items-center gap-[36px] mx-auto">
@@ -90,14 +90,14 @@ const PricingSection = () => {
                 // Containerfor 2
                 <div className="w-[1440px] flex flex-col pt-[64px] pb-[96px] gap-[36px] mx-auto">
                     {/* Pricing */}
-                    <div className="flex justify-center gap-[16px] px-[32px] w-full max-w-[1280px] mx-auto">
+                    <div className="flex flex-wrap justify-center gap-[16px] px-[32px] w-full max-w-[1280px] mx-auto">
                         {pricingOptions.map((option) => (
                             <div
                             key={option.name}
                             onClick={() => setSelectedPlan(option.name as 'Basic' | 'Advanced' | 'Enterprise')}
                             className={`flex flex-col justify-between bg-white rounded-[24px] border ${
                                 selectedPlan === option.name ? 'border-2 border-[#4F46E5]' : 'border-[#E5E7EB]'
-                            } px-[32px] py-[32px] h-[450px] w-full max-w-[336px] min-w-[280px] cursor-pointer`}
+                            } px-[32px] py-[32px] h-[450px] w-full sm:w-[100%] md:w-[48%] lg:w-[32%] cursor-pointer`}
                             >
                                 {/* Title + badge */}
                                 <div>
