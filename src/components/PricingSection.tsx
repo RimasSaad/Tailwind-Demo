@@ -88,7 +88,7 @@ const PricingSection = () => {
             {/* Pricing Cards Conditionally rendering */}
             {billingPeriod === 'monthly' ? (
                 // Container 2
-                <div className="flex flex-col pt-[64px] pb-[96px] gap-[36px] mx-auto"> {/* deleted w-[1440px] */}
+                <div className="flex flex-col pt-[64px] pb-[96px] gap-[36px] mx-auto">
                     {/* Pricing */}
                     <div className="flex flex-wrap justify-center gap-[16px] px-[32px] w-full max-w-[1280px] mx-auto">
                         {pricingOptions.map((option) => (
