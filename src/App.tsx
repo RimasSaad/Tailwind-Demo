@@ -7,7 +7,7 @@ import CTASection from './components/CTASection'; // Import the CTASection compo
 
 function App() {
   return (
-    <div>
+    <div className="w-screen h-dvh">
       {/* Render the Pricing Section */}
       <PricingSection />
       {/* Render the FAQ Section */}
