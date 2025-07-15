@@ -42,7 +42,7 @@ const PricingSection = () => {
         <div className="w-[1440px] bg-white mx-auto"> 
 
             {/* Containerfor 1 */}
-            <div className="w-[1440px] pt-[96px] flex flex-col items-center gap-[36px] mx-auto">
+            <div className="pt-[96px] flex flex-col items-center gap-[36px] mx-auto">
                 {/* Frame 13 */} 
                 <div className="w-full max-w-[1280px] px-[32px] flex flex-col gap-[32px]">
                     {/* Heading and Supporting text */}
@@ -87,8 +87,8 @@ const PricingSection = () => {
 
             {/* Pricing Cards Conditionally rendering */}
             {billingPeriod === 'monthly' ? (
-                // Containerfor 2
-                <div className="w-[1440px] flex flex-col pt-[64px] pb-[96px] gap-[36px] mx-auto">
+                // Container 2
+                <div className="flex flex-col pt-[64px] pb-[96px] gap-[36px] mx-auto"> {/* deleted w-[1440px] */}
                     {/* Pricing */}
                     <div className="flex flex-wrap justify-center gap-[16px] px-[32px] w-full max-w-[1280px] mx-auto">
                         {pricingOptions.map((option) => (

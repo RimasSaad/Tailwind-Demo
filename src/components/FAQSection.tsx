@@ -40,7 +40,9 @@ const FAQSection = () => {
     return (
         //Secion with full width
         <section className="w-full">
-            <div className="w-full max-w-[1440px] mx-auto bg-white flex flex-col items-center pt-16 pb-16 gap-16 mx-auto">
+            {/*<div className="w-full max-w-[1440px] mx-auto bg-white flex flex-col items-center pt-16 pb-16 gap-16 mx-auto"> */}
+            <div className=" w-[1440px] mx-auto bg-white flex flex-col items-center pt-16 pb-16 gap-16 mx-auto">
+              
                 {/* Container to hold Heading, supporting text and the FAQ */}
                 <div className="w-full max-w-[1280px] px-4 gap-16 flex flex-col items-center">
 
