@@ -42,105 +42,105 @@ const PricingSection = () => {
         <div className="w-[1440px] bg-white mx-auto"> 
 
             {/* Containerfor 1 */}
-            <div className="pt-[96px] flex flex-col items-center gap-[36px] mx-auto">
-                {/* Frame 13 */} 
-                <div className="w-full max-w-[1280px] px-[32px] flex flex-col gap-[32px]">
-                    {/* Heading and Supporting text */}
-                    <div className="w-full max-w-[768px] flex flex-col gap-[16px] mx-auto text-center">
-                        <div className="w-full max-w-[768px] flex flex-col gap-[12px]">
-                            <h4 className="font-inter text-[16px] leading-[24px] font-semibold tracking-normal text-[var(--sub-headline)]">Pricing</h4>
-                            <h2 className="font-inter text-[36px] leading-[44px] font-semibold tracking-[-2px] text-[var(--heading-primary)]">
-                                Scalable plans for any team size</h2> 
-                        </div>
-                        <p className=" font-inter text-[18px] text-[var(--body)] text-base leading-[28px] tracking-normal max-w-[768px] mx-auto">
-                            Unlock the power of scalability with our plans tailored to accommodate teams of any size, 
-                            providing the flexibility you need to grow and succeed.
-                        </p>
+            <div className="w-full max-w-[1280px] flex flex-col items-center pt-24 px-8 gap-8 mx-auto">
+                {/* Heading and Supporting text */}
+                <div className="w-full max-w-[768px] flex flex-col gap-[16px] mx-auto text-center">
+                    <div className="w-full max-w-[768px] flex flex-col gap-[12px]">
+                        <h4 className="font-inter text-[16px] leading-[24px] font-semibold tracking-normal text-[var(--sub-headline)]">Pricing</h4>
+                        <h2 className="font-inter text-[36px] leading-[44px] font-semibold tracking-[-2px] text-[var(--heading-primary)]">
+                            Scalable plans for any team size</h2> 
                     </div>
-
-                    {/* Monthly/Annually toggle buttons */}
-                    <div className="flex justify-center items-center bg-[var(--bg-secondary)] rounded-3xl w-[185px] h-[44px] mx-auto p-[4px]">
-                        <button
-                            onClick={() => setBillingPeriod('monthly')}
-                            className={`w-[83px] h-[36px] rounded-3xl text-sm font-medium focus:outline-none transition
-                            ${billingPeriod === 'monthly'
-                                ? 'bg-white shadow text-gray-900'
-                                : 'bg-transparent text-gray-500'}`
-                            }
-                        >
-                            Monthly
-                        </button>
-
-                        <button
-                            onClick={() => setBillingPeriod('annually')}
-                            className={`w-[86px] h-[36px] rounded-3xl text-sm font-medium focus:outline-none transition
-                            ${billingPeriod === 'annually'
-                                ? 'bg-white shadow text-gray-900'
-                                : 'bg-transparent text-gray-500'}`
-                            }
-                        >
-                            Annually
-                        </button>
-                    </div>
+                    <p className=" font-inter text-[18px] text-[var(--body)] text-base leading-[28px] tracking-normal max-w-[768px] mx-auto">                            Unlock the power of scalability with our plans tailored to accommodate teams of any size, 
+                        providing the flexibility you need to grow and succeed.
+                    </p>
                 </div>
+
+                {/* Monthly/Annually toggle buttons */}
+                    <div className="flex justify-center items-center bg-[var(--bg-secondary)] rounded-3xl w-[185px] h-[44px] mx-auto p-[4px]">
+                    <button
+                        onClick={() => setBillingPeriod('monthly')}
+                        className={`w-[83px] h-[36px] rounded-3xl text-sm font-medium focus:outline-none transition
+                        ${billingPeriod === 'monthly'
+                            ? 'bg-white shadow text-gray-900'
+                            : 'bg-transparent text-gray-500'}`
+                        }
+                    >
+                        Monthly
+                    </button>
+
+                    <button
+                        onClick={() => setBillingPeriod('annually')}
+                        className={`w-[86px] h-[36px] rounded-3xl text-sm font-medium focus:outline-none transition
+                        ${billingPeriod === 'annually'
+                            ? 'bg-white shadow text-gray-900'
+                            : 'bg-transparent text-gray-500'}`
+                        }
+                    >
+                        Annually
+                    </button>
+                </div>
+
             </div>
 
-            {/* Pricing Cards Conditionally rendering */}
+            {/* Conditionally rendering Pricing Cards */}
             {billingPeriod === 'monthly' ? (
                 // Container 2
-                <div className="flex flex-col pt-[64px] pb-[96px] gap-[36px] mx-auto">
-                    {/* Pricing */}
-                    <div className="flex flex-wrap justify-center gap-[16px] px-[32px] w-full max-w-[1280px] mx-auto">
-                        {pricingOptions.map((option) => (
-                            <div
-                            key={option.name}
-                            onClick={() => setSelectedPlan(option.name as 'Basic' | 'Advanced' | 'Enterprise')}
-                            className={`flex flex-col justify-between bg-white rounded-[24px] border ${
-                                selectedPlan === option.name ? 'border-2 border-[#4F46E5]' : 'border-[#E5E7EB]'
-                            } px-[32px] py-[32px] h-[450px] w-full sm:w-[100%] md:w-[48%] lg:w-[32%] cursor-pointer`}
-                            >
-                                {/* Title + badge */}
-                                <div>
-                                    <h3 className="text-xl font-semibold mb-1 flex items-center text-left">
-                                    {option.name}
-                                    {option.badge && (
-                                        <span className="border border-[#C7D2FE] bg-[#EEF2FF] text-[#4338CA] text-xs font-medium pt-px pb-px pl-[10px] pr-[10px] gap-[6px] rounded-[6px] ml-2">
-                                        {option.badge}
-                                        </span>
-                                    )}
-                                    </h3>
-                                    <p className="text-[16px] leading-[24px] text-gray-500 text-left">{option.description}</p>
-                                </div>
-
-                                {/* Price */}
-                                <div className="flex items-baseline text-left">
-                                    <span className="text-[48px] font-semibold">{option.price}</span>
-                                    <span className="text-gray-500 ml-1 text-base">/month</span>
-                                </div>
-
-                                {/* Features */}
-                                <ul className="space-y-[12px] text-[16px] text-gray-600 text-left">
-                                    {option.features.map((feature) => (
-                                    <li key={feature} className="flex items-center">
-                                        <span className="text-[#6366F1] mr-2">✓</span>
-                                        {feature}
-                                    </li>
-                                    ))}
-                                </ul>
-
-                                {/* Button */}
-                                <button
-                                    className={`pt-[10px] pb-[10px] pl-[20px] pr-[20px] gap-[8px] w-full rounded-[6px] transition font-medium text-sm ${
-                                    selectedPlan === option.name
-                                        ? 'bg-[var(--bg-button-primary)] text-white'
-                                        : 'border border-gray-300 text-gray-800 font-semibold'
-                                    }`}
-                                >
-                                    Get started
-                                </button>
+                <div className="flex flex-col pt-[64px] pb-[96px] gap-[36px] px-[32px] w-full">
+                <div className="flex flex-wrap justify-center gap-[16px] w-full max-w-[1280px] mx-auto">
+                {/* Pricing */}
+                    {pricingOptions.map((option) => (
+                        // Borders and styles
+                        <div
+                        key={option.name}
+                        onClick={() => setSelectedPlan(option.name as 'Basic' | 'Advanced' | 'Enterprise')}
+                        className={`flex flex-col justify-between bg-white rounded-[24px] 
+                            border ${
+                            selectedPlan === option.name ? 'border-2 border-[#4F46E5]' : 'border-[#E5E7EB]'
+                            } 
+                            px-8 py-8 h-[450px] w-full sm:w-[60%] md:w-[48%] lg:w-[32%] cursor-pointer`}
+                        >
+                            {/* Title + badge */}
+                            <div>
+                                <h3 className="text-xl font-semibold mb-1 flex items-center text-left">
+                                {option.name}
+                                {option.badge && (
+                                    <span className="border border-[#C7D2FE] bg-[#EEF2FF] text-[#4338CA] text-xs font-medium px-[10px] rounded-[6px] ml-2">
+                                    {option.badge}
+                                    </span>
+                                )}
+                                </h3>
+                                <p className="text-[16px] leading-[24px] text-gray-500 text-left">{option.description}</p>
                             </div>
-                        ))}
-                    </div>
+
+                            {/* Price */}
+                            <div className="flex items-baseline text-left">
+                                <span className="text-[48px] font-semibold">{option.price}</span>
+                                <span className="text-gray-500 ml-1 text-base">/month</span>
+                            </div>
+
+                            {/* Features */}
+                            <ul className="space-y-[12px] text-[16px] text-gray-600 text-left">
+                                {option.features.map((feature) => (
+                                <li key={feature} className="flex items-center">
+                                    <span className="text-[#6366F1] mr-2">✓</span>
+                                    {feature}
+                                </li>
+                                ))}
+                            </ul>
+
+                            {/* Button */}
+                            <button
+                                className={`py-[10px] px-[20px] gap-[8px] w-full rounded-[6px] transition font-medium text-sm ${
+                                selectedPlan === option.name
+                                    ? 'bg-[var(--bg-button-primary)] text-white'
+                                    : 'border border-gray-300 text-gray-800 font-semibold'
+                                }`}
+                            >
+                                Get started
+                            </button>
+                        </div>
+                    ))}
+                </div>
                 </div>
             ) : (
                     <div className="text-center text-gray-500">

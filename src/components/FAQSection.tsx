@@ -37,49 +37,34 @@ const faqItems = [
 
 const FAQSection = () => {
 
-    return (
-        //Secion with full width
-        <section className="w-full">
-            <div className=" w-[1440px] mx-auto bg-white flex flex-col items-center pt-16 pb-16 gap-16 mx-auto">
-              
-                {/* Container to hold Heading, supporting text and the FAQ */}
-                <div className="w-full max-w-[1280px] px-4 gap-16 flex flex-col items-center">
-
-                    {/* Heading and supporting text */}
-                    <div className="w-full max-w-[768px] flow flow-col gap-4 text-center">
-                        {/* Heading */}
-                        <div className="w-full lg:w-[768px] h-[44px] gap-3">
-                            <h4 className="font-inter font-semibold text-[36px] leading-[44px] tracking-[-2px] text-center text-[var(--heading-primary)]">Frequently asked questions</h4>
-                        </div>
-                        {/* Supporting text */}
-                        <p className="font-inter font-normal text-[18px] leading-[28px] text-center">
-                            Here are some of the most frequent questions we get asked.
-                        </p>
-                        <p className="font-inter font-normal text-[18px] leading-[28px] text-center">
-                            Got more questions? Visit our 
-                            <a href="#" className="text-[var(--sub-headline)]"> help center</a>.
-                        </p>
-                    </div>
-                    {/* FAQ Container */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[32px] gap-y-8 w-full max-w-[1216px] place-items-center">
-                        {faqItems.map((item, index) => (
-                        <div key={index} 
-                            className="flex flex-col w-full max-w-[384px] gap-2 text-center">
-                            <p className="font-inter font-semibold text-[18px] leading-[28px] text-[var(--heading-primary)]">
-                            {item.question}
-                            </p>
-                            <p className="font-inter font-normal text-[16px] leading-[24px] text-[var(--body)]">
-                            {item.answer}
-                            </p>
-                        </div>
-                        ))}
-                    </div>
-
-                </div>
+  return (
+      //Secion with full width
+      <section className="w-full">
+        <div className="w-[1440px] mx-auto bg-white flex flex-col items-center pt-16 pb-16 gap-16 mx-auto">
+          {/* Container to hold Heading, supporting text and the FAQ */}
+          <div className="w-full max-w-[1280px] px-4 gap-16 flex flex-col items-center">
+            {/* Heading and supporting text */}
+            <div className="w-full max-w-[768px] flow flow-col gap-7 text-center">
+              {/* Heading */}
+                <h4 className="font-inter font-semibold text-[36px] leading-[44px] tracking-[-2px] text-center text-[var(--heading-primary)]">Frequently asked questions</h4>
+              {/* Supporting text */}
+                <p className="font-inter font-normal text-[18px] leading-[28px] text-center">Here are some of the most frequent questions we get asked.</p>
+                <p className="font-inter font-normal text-[18px] leading-[28px] text-center">Got more questions? Visit our <a href="#" className="text-[var(--sub-headline)]"> help center</a>.</p>
             </div>
-            
-        </section>
-    );
+            {/* FAQ Container */}
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-[32px] gap-y-8 w-full max-w-[1216px] place-items-center">
+              {faqItems.map((item, index) => (
+                <div key={index} 
+                  className="flex flex-col w-full max-w-[384px] gap-2">
+                  <p className="font-inter font-semibold text-[18px] leading-[28px] text-[var(--heading-primary)]">{item.question}</p>
+                  <p className="font-inter font-normal text-[16px] leading-[24px] text-[var(--body)]">{item.answer}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>  
+      </section>
+  );
 
 };
 export default FAQSection;
