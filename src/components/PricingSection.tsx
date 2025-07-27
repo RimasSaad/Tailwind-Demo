@@ -97,7 +97,7 @@ const PricingSection = () => {
                             border ${
                             selectedPlan === option.name ? 'border-2 border-[#4F46E5]' : 'border-[#E5E7EB]'
                             } 
-                            px-8 py-8 h-[450px] w-full sm:w-[60%] md:w-[48%] lg:w-[32%] cursor-pointer`}
+                            px-8 py-8 h-[450px] w-[60%] md:w-[48%] lg:w-[32%] cursor-pointer`}
                         >
                             {/* Title + badge */}
                             <div>
